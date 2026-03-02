@@ -3,5 +3,8 @@
   "workspaces": [
     "ui-library",
     "demo-food-app"
-  ]
+  ],
+  "scripts": {
+    "build": "npm install && npm run build -w ui-library && npm run build -w demo-food-app"
+  }
 }
