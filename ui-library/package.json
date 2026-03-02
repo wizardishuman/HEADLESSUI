@@ -1,0 +1,75 @@
+{
+  "name": "@headless-food/ui-library",
+  "version": "1.0.0",
+  "description": "Headless UI component library with accessibility-first primitives.",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "docs"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./button": {
+      "types": "./dist/components/Button/index.d.ts",
+      "import": "./dist/components/Button/index.js"
+    },
+    "./card": {
+      "types": "./dist/components/Card/index.d.ts",
+      "import": "./dist/components/Card/index.js"
+    },
+    "./input": {
+      "types": "./dist/components/Input/index.d.ts",
+      "import": "./dist/components/Input/index.js"
+    },
+    "./modal": {
+      "types": "./dist/components/Modal/index.d.ts",
+      "import": "./dist/components/Modal/index.js"
+    },
+    "./dropdown": {
+      "types": "./dist/components/Dropdown/index.d.ts",
+      "import": "./dist/components/Dropdown/index.js"
+    },
+    "./tabs": {
+      "types": "./dist/components/Tabs/index.d.ts",
+      "import": "./dist/components/Tabs/index.js"
+    },
+    "./toast": {
+      "types": "./dist/components/Toast/index.d.ts",
+      "import": "./dist/components/Toast/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --splitting --clean",
+    "test": "vitest run --config vitest.config.ts",
+    "test:watch": "vitest --config vitest.config.ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^26.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "vitest": "^2.1.8"
+  }
+}
