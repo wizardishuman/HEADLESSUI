@@ -11,7 +11,7 @@
     "test:watch": "vitest --config vitest.config.ts"
   },
   "dependencies": {
-    "@headless-food/ui-library": "file:../ui-library",
+    "@headless-food/ui-library": "*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.30.1"
